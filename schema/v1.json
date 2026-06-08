@@ -199,6 +199,63 @@
           }
         }
       }
+    },
+    {
+      "title": "overlay-live.json",
+      "type": "object",
+      "required": ["version", "matches", "updated_at"],
+      "properties": {
+        "version": { "const": 1 },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "matches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["match_id", "tournament_id", "tournament_name"],
+            "properties": {
+              "match_id": { "type": "integer" },
+              "tournament_id": { "type": "integer" },
+              "tournament_name": { "type": "string" },
+              "map_name": { "type": ["string", "null"] },
+              "gametype": { "type": ["string", "null"] },
+              "server_name": { "type": ["string", "null"] },
+              "connect": { "type": ["string", "null"] },
+              "show_popup": { "type": "boolean" },
+              "players": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["steam_id64"],
+                  "properties": {
+                    "steam_id64": { "type": "string" },
+                    "nickname": { "type": ["string", "null"] },
+                    "score": { "type": "integer" },
+                    "kills": { "type": "integer" },
+                    "deaths": { "type": "integer" }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "title": "assets/overlay-logos.json",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "url"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "additionalProperties": false
+      }
     }
   ]
 }
