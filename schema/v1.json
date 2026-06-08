@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/alexeytihomirov/ql-public-data/blob/main/schema/v1.json",
+  "title": "QL Public Data v1",
+  "description": "Public tournament data published by QL Hub",
+  "definitions": {
+    "playerId": {
+      "type": "string",
+      "pattern": "^p-[a-f0-9]{8}$"
+    },
+    "publicPlayer": {
+      "type": "object",
+      "required": ["id", "nickname"],
+      "properties": {
+        "id": { "$ref": "#/definitions/playerId" },
+        "nickname": { "type": "string" },
+        "country": { "type": ["string", "null"], "maxLength": 2 },
+        "steam_id64": { "type": "string", "description": "Only when hub publish mode includes steam IDs" }
+      },
+      "additionalProperties": false
+    },
+    "bracketGame": {
+      "type": "object",
+      "properties": {
+        "game_number": { "type": "integer" },
+        "map_name": { "type": ["string", "null"] },
+        "score_text": { "type": ["string", "null"] },
+        "score_p1": { "type": ["integer", "null"] },
+        "score_p2": { "type": ["integer", "null"] },
+        "winner_id": { "$ref": "#/definitions/playerId" },
+        "notes": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "bracketMatch": {
+      "type": "object",
+      "required": ["id", "status"],
+      "properties": {
+        "id": { "type": "integer" },
+        "bracket_id": { "type": "integer" },
+        "stage_id": { "type": ["integer", "null"] },
+        "round": { "type": "integer" },
+        "slot": { "type": "integer" },
+        "group_id": { "type": ["integer", "null"] },
+        "bracket_side": { "type": ["string", "null"] },
+        "match_label": { "type": ["string", "null"] },
+        "status": { "type": "string" },
+        "player1_id": { "$ref": "#/definitions/playerId" },
+        "player2_id": { "$ref": "#/definitions/playerId" },
+        "winner_id": { "$ref": "#/definitions/playerId" },
+        "live_match_id": { "type": ["integer", "null"] },
+        "next_win_match_id": { "type": ["integer", "null"] },
+        "next_lose_match_id": { "type": ["integer", "null"] },
+        "feed_win_slot": { "type": ["integer", "null"] },
+        "feed_lose_slot": { "type": ["integer", "null"] },
+        "scheduled_at": { "type": ["string", "null"], "format": "date-time" },
+        "notes": { "type": ["string", "null"] },
+        "games": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/bracketGame" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "matchPlayer": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "$ref": "#/definitions/playerId" },
+        "nickname": { "type": ["string", "null"] },
+        "team": { "type": ["string", "null"] },
+        "score": { "type": "integer" },
+        "kills": { "type": "integer" },
+        "deaths": { "type": "integer" },
+        "steam_id64": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "endedMatch": {
+      "type": "object",
+      "required": ["version", "id", "status"],
+      "properties": {
+        "version": { "const": 1 },
+        "id": { "type": "integer" },
+        "bracket_match_id": { "type": ["integer", "null"] },
+        "map_name": { "type": ["string", "null"] },
+        "gametype": { "type": ["string", "null"] },
+        "status": { "const": "ended" },
+        "winner_id": { "$ref": "#/definitions/playerId" },
+        "started_at": { "type": ["string", "null"], "format": "date-time" },
+        "ended_at": { "type": ["string", "null"], "format": "date-time" },
+        "players": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/matchPlayer" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "title": "index.json",
+      "type": "object",
+      "required": ["version", "tournaments"],
+      "properties": {
+        "version": { "const": 1 },
+        "updated_at": { "type": ["string", "null"], "format": "date-time" },
+        "tournaments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["slug", "name", "status"],
+            "properties": {
+              "slug": { "type": "string" },
+              "name": { "type": "string" },
+              "status": { "type": "string" },
+              "updated_at": { "type": ["string", "null"], "format": "date-time" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "meta.json",
+      "type": "object",
+      "required": ["version", "slug", "name", "status"],
+      "properties": {
+        "version": { "const": 1 },
+        "slug": { "type": "string" },
+        "name": { "type": "string" },
+        "status": { "type": "string" },
+        "notes": { "type": ["string", "null"] },
+        "published_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": ["string", "null"], "format": "date-time" }
+      }
+    },
+    {
+      "title": "players.json",
+      "type": "object",
+      "required": ["version", "players"],
+      "properties": {
+        "version": { "const": 1 },
+        "players": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/publicPlayer" }
+        }
+      }
+    },
+    {
+      "title": "bracket.json",
+      "type": "object",
+      "required": ["version", "brackets", "stages", "matches"],
+      "properties": {
+        "version": { "const": 1 },
+        "brackets": { "type": "array" },
+        "stages": { "type": "array" },
+        "matches": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/bracketMatch" }
+        }
+      }
+    },
+    {
+      "title": "matches/{id}.json",
+      "$ref": "#/definitions/endedMatch"
+    },
+    {
+      "title": "stats/summary.json",
+      "type": "object",
+      "required": ["version"],
+      "properties": {
+        "version": { "const": 1 },
+        "matches_ended": { "type": "integer" },
+        "maps_played": { "type": "integer" },
+        "total_kills": { "type": "integer" },
+        "total_deaths": { "type": "integer" }
+      }
+    },
+    {
+      "title": "stats/players.json",
+      "type": "object",
+      "required": ["version", "players"],
+      "properties": {
+        "version": { "const": 1 },
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": { "$ref": "#/definitions/playerId" },
+              "nickname": { "type": ["string", "null"] },
+              "matches": { "type": "integer" },
+              "wins": { "type": "integer" },
+              "kills": { "type": "integer" },
+              "deaths": { "type": "integer" },
+              "score": { "type": "integer" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
