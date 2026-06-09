@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updated_at": "2026-06-09T11:11:12.045217Z",
+  "updated_at": "2026-06-09T22:41:27.832092Z",
   "tournaments": [
     {
       "slug": "test-cup-1",
       "name": "Test Cup 1",
       "status": "active",
-      "updated_at": "2026-06-09T11:11:07Z"
+      "updated_at": "2026-06-09T15:58:52Z"
     }
   ]
 }
