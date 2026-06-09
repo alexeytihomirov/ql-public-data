@@ -1,6 +1,35 @@
 {
   "version": 1,
-  "brackets": [],
+  "brackets": [
+    {
+      "id": 1,
+      "name": "Main",
+      "format": "single_elim"
+    }
+  ],
   "stages": [],
-  "matches": []
+  "matches": [
+    {
+      "id": 1,
+      "bracket_id": 1,
+      "stage_id": null,
+      "round": 1,
+      "slot": 0,
+      "group_id": null,
+      "bracket_side": null,
+      "match_label": null,
+      "status": "pending",
+      "player1_id": "p-74c8513c",
+      "player2_id": "p-74c8513c",
+      "winner_id": null,
+      "live_match_id": null,
+      "next_win_match_id": null,
+      "next_lose_match_id": null,
+      "feed_win_slot": null,
+      "feed_lose_slot": null,
+      "scheduled_at": null,
+      "notes": null,
+      "games": []
+    }
+  ]
 }
