@@ -5,7 +5,7 @@
       "id": "p-74c8513c",
       "nickname": "Test 1",
       "country": null,
-      "avatar": null,
+      "avatar": "https://cdn.jsdelivr.net/gh/alexeytihomirov/ql-public-data@main/assets/players/p-74c8513c/00000001-image.png",
       "team_history": [],
       "steam_id64": null
     },
