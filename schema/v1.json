@@ -244,6 +244,44 @@
       "additionalProperties": false
     },
     {
+      "title": "maps.json",
+      "type": "object",
+      "required": ["version", "maps"],
+      "properties": {
+        "version": { "const": 1 },
+        "maps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "display_name": { "type": ["string", "null"] },
+              "creator": { "type": ["string", "null"] },
+              "tags": { "type": "array", "items": { "type": "string" } },
+              "workshop_url": { "type": ["string", "null"], "format": "uri" },
+              "thumbnail": { "type": ["string", "null"], "format": "uri" },
+              "sort_order": { "type": "integer" },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["file"],
+                  "properties": {
+                    "file": { "type": "string" },
+                    "is_primary": { "type": "boolean" }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
       "title": "assets/overlay-logos.json",
       "type": "array",
       "items": {
