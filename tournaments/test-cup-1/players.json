@@ -80,6 +80,22 @@
       "avatar": null,
       "team_history": [],
       "steam_id64": null
+    },
+    {
+      "id": "p-b0684a33",
+      "nickname": "Test 11",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-7b4c7cbe",
+      "nickname": "Test 12",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
     }
   ]
 }
