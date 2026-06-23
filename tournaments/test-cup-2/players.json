@@ -3,7 +3,7 @@
   "players": [
     {
       "id": "p-74c8513c",
-      "nickname": "Test 1",
+      "nickname": "Player 1",
       "country": null,
       "avatar": "https://cdn.jsdelivr.net/gh/alexeytihomirov/ql-public-data@main/assets/players/p-74c8513c/00000001-image.png",
       "team_history": [],
@@ -11,7 +11,7 @@
     },
     {
       "id": "p-db47cee0",
-      "nickname": "Test 2",
+      "nickname": "Player 2",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -19,7 +19,7 @@
     },
     {
       "id": "p-22f331ff",
-      "nickname": "Test 3",
+      "nickname": "Player 3",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -27,7 +27,7 @@
     },
     {
       "id": "p-9641de6b",
-      "nickname": "Test 4",
+      "nickname": "Player 4",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -35,7 +35,7 @@
     },
     {
       "id": "p-dd0b1942",
-      "nickname": "Test 5",
+      "nickname": "Player 5",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -43,7 +43,7 @@
     },
     {
       "id": "p-c3eb4a75",
-      "nickname": "Test 6",
+      "nickname": "Player 6",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -51,7 +51,7 @@
     },
     {
       "id": "p-7c7bf90a",
-      "nickname": "Test 7",
+      "nickname": "Player 7",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -59,7 +59,7 @@
     },
     {
       "id": "p-ca3bc6da",
-      "nickname": "Test 8",
+      "nickname": "Player 8",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -67,7 +67,7 @@
     },
     {
       "id": "p-66ed4de2",
-      "nickname": "Test 9",
+      "nickname": "Player 9",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -75,7 +75,7 @@
     },
     {
       "id": "p-7681d4db",
-      "nickname": "Test 10",
+      "nickname": "Player 10",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -83,7 +83,7 @@
     },
     {
       "id": "p-b0684a33",
-      "nickname": "Test 11",
+      "nickname": "Player 11",
       "country": null,
       "avatar": null,
       "team_history": [],
@@ -91,7 +91,71 @@
     },
     {
       "id": "p-7b4c7cbe",
-      "nickname": "Test 12",
+      "nickname": "Player 12",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-33e39396",
+      "nickname": "Player 13",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-dbc4e5b7",
+      "nickname": "Player 14",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-5d213b5b",
+      "nickname": "Player 15",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-97dda17c",
+      "nickname": "Player 16",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-8b1ca40b",
+      "nickname": "Player 17",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-c22e33bd",
+      "nickname": "Player 18",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-70c75c48",
+      "nickname": "Player 19",
+      "country": null,
+      "avatar": null,
+      "team_history": [],
+      "steam_id64": null
+    },
+    {
+      "id": "p-9555e0e0",
+      "nickname": "Player 20",
       "country": null,
       "avatar": null,
       "team_history": [],

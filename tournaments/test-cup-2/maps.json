@@ -17,21 +17,6 @@
         }
       ],
       "sort_order": 0
-    },
-    {
-      "name": "bloodrun",
-      "display_name": "Blood Run",
-      "creator": null,
-      "tags": [],
-      "workshop_url": null,
-      "thumbnail": "https://cdn.jsdelivr.net/gh/alexeytihomirov/ql-public-data@main/assets/maps/bloodrun/bloodrun.jpg",
-      "images": [
-        {
-          "file": "assets/maps/bloodrun/bloodrun.jpg",
-          "is_primary": true
-        }
-      ],
-      "sort_order": 1
     }
   ]
 }
