@@ -76,6 +76,32 @@
       },
       "additionalProperties": false
     },
+    "demoEntry": {
+      "type": "object",
+      "required": ["id", "url"],
+      "properties": {
+        "id": { "type": "string", "description": "Stable demo id within tournament" },
+        "url": { "type": "string", "format": "uri" },
+        "filename": { "type": ["string", "null"] },
+        "map_name": { "type": ["string", "null"] },
+        "bracket_match_id": { "type": ["integer", "null"] },
+        "game_number": { "type": ["integer", "null"] },
+        "player_ids": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/playerId" }
+        },
+        "players": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Display names when player_ids not resolved"
+        },
+        "live_match_id": { "type": ["string", "null"], "description": "stats-hub session_id / match_id" },
+        "recorded_at": { "type": ["string", "null"], "format": "date-time" },
+        "duration_sec": { "type": ["integer", "null"] },
+        "notes": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
     "endedMatch": {
       "type": "object",
       "required": ["version", "id", "status"],
@@ -163,6 +189,20 @@
     {
       "title": "matches/{id}.json",
       "$ref": "#/definitions/endedMatch"
+    },
+    {
+      "title": "demos.json",
+      "type": "object",
+      "required": ["version", "demos"],
+      "properties": {
+        "version": { "const": 1 },
+        "updated_at": { "type": ["string", "null"], "format": "date-time" },
+        "demos": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/demoEntry" }
+        }
+      },
+      "additionalProperties": false
     },
     {
       "title": "stats/summary.json",

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/alexeytihomirov/ql-public-data/blob/main/schema/v2-analytics.json",
+  "title": "QL Public Game Analytics v2",
+  "description": "Published per-map game analytics after operator confirmation",
+  "type": "object",
+  "required": ["version", "bracket_match_id", "game_number", "map_name"],
+  "properties": {
+    "version": { "const": 2 },
+    "bracket_match_id": { "type": "integer" },
+    "game_number": { "type": "integer" },
+    "map_name": { "type": ["string", "null"] },
+    "gametype": { "type": ["string", "null"] },
+    "started_at": { "type": ["string", "null"], "format": "date-time" },
+    "ended_at": { "type": ["string", "null"], "format": "date-time" },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^p-[a-f0-9]{8}$" },
+          "nickname": { "type": ["string", "null"] },
+          "score": { "type": "integer" },
+          "kills": { "type": "integer" },
+          "deaths": { "type": "integer" }
+        }
+      }
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "ts"],
+        "properties": {
+          "kind": { "type": "string" },
+          "player_id": { "type": ["string", "null"] },
+          "nickname": { "type": ["string", "null"] },
+          "text": { "type": ["string", "null"] },
+          "ts": { "type": "string", "format": "date-time" },
+          "meta": { "type": "object" }
+        }
+      }
+    },
+    "accuracy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["player_id", "weapons"],
+        "properties": {
+          "player_id": { "type": "string" },
+          "weapons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["weapon"],
+              "properties": {
+                "weapon": { "type": "string" },
+                "hits": { "type": ["integer", "null"] },
+                "shots": { "type": ["integer", "null"] },
+                "accuracy_pct": { "type": ["number", "null"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "events_summary": {
+      "type": "object",
+      "properties": {
+        "deaths": { "type": "integer" },
+        "pickups": { "type": "integer" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

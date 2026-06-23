@@ -11,8 +11,11 @@ CDN-friendly JSON and static assets for tournament overlays and public pages. Se
 - `index.json` — catalog root
 - `schema/` — JSON schemas
 - `tournaments/{slug}/` — per-event data
-  - `meta.json`, `bracket.json`, `players.json`, …
+  - `meta.json`, `bracket.json`, `players.json`, `demos.json`, …
+  - `stats/summary.json`, `stats/players.json` — tournament aggregates
+  - `games/{id}.json` — published per-game analytics (v2, after hub publish)
   - `overlay-live.json` — live match fields for overlays
+  - `regulations.md` — **official tournament rules** (markdown, CDN link for players/streamers)
 - `assets/overlay-logos/` — logo images
 - `assets/overlay-logos.json` — logo catalog
 
@@ -23,7 +26,7 @@ CDN-friendly JSON and static assets for tournament overlays and public pages. Se
 
 ## Consumers
 
-- **ql-stream-tools** `stream-overlay/` reads tournament JSON from CDN (transitioning to WebSocket for live fields — see private stream-tools docs).
+- **ql-stream-tools** `live-overlay/dashboard/` and `stream-overlay/` read tournament JSON from CDN (live fields via WebSocket where implemented).
 - **ql-hub** publishes via `public_publish` (private hub code).
 
 ## Schema changes
