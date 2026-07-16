@@ -1,7 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-06-22T12:31:50.211948Z",
+  "updated_at": "2026-07-16T12:45:26.572079Z",
   "tournaments": [
+    {
+      "slug": "stage-debug-test",
+      "name": "Stage Debug Test",
+      "status": "active",
+      "updated_at": "2026-07-16T12:43:46Z"
+    },
     {
       "slug": "test-cup-2",
       "name": "Test Cup 2",
