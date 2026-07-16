@@ -2,27 +2,27 @@
   "version": 1,
   "brackets": [
     {
-      "id": 4,
-      "name": "Stage 2",
+      "id": 3,
+      "name": "Stage 1",
       "format": "round_robin"
     }
   ],
   "stages": [
     {
-      "id": 3,
-      "bracket_id": 4,
-      "name": "Stage 2",
+      "id": 2,
+      "bracket_id": 3,
+      "name": "Stage 1",
       "stage_type": "round_robin",
-      "stage_order": 2,
+      "stage_order": 1,
       "group_count": 5,
       "status": "active"
     }
   ],
   "matches": [
     {
-      "id": 57,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 17,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 0,
       "group_id": 1,
@@ -52,9 +52,9 @@
       ]
     },
     {
-      "id": 63,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 23,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 0,
       "group_id": 2,
@@ -84,9 +84,9 @@
       ]
     },
     {
-      "id": 69,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 29,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 0,
       "group_id": 3,
@@ -116,9 +116,9 @@
       ]
     },
     {
-      "id": 75,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 35,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 0,
       "group_id": 4,
@@ -148,9 +148,9 @@
       ]
     },
     {
-      "id": 81,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 41,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 0,
       "group_id": 5,
@@ -180,9 +180,9 @@
       ]
     },
     {
-      "id": 58,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 18,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 1,
       "group_id": 1,
@@ -212,9 +212,9 @@
       ]
     },
     {
-      "id": 64,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 24,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 1,
       "group_id": 2,
@@ -244,9 +244,9 @@
       ]
     },
     {
-      "id": 70,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 30,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 1,
       "group_id": 3,
@@ -276,9 +276,9 @@
       ]
     },
     {
-      "id": 76,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 36,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 1,
       "group_id": 4,
@@ -308,9 +308,9 @@
       ]
     },
     {
-      "id": 82,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 42,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 1,
       "group_id": 5,
@@ -340,9 +340,9 @@
       ]
     },
     {
-      "id": 59,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 19,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 2,
       "group_id": 1,
@@ -372,9 +372,9 @@
       ]
     },
     {
-      "id": 65,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 25,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 2,
       "group_id": 2,
@@ -404,9 +404,9 @@
       ]
     },
     {
-      "id": 71,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 31,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 2,
       "group_id": 3,
@@ -436,9 +436,9 @@
       ]
     },
     {
-      "id": 77,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 37,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 2,
       "group_id": 4,
@@ -468,9 +468,9 @@
       ]
     },
     {
-      "id": 83,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 43,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 2,
       "group_id": 5,
@@ -500,9 +500,9 @@
       ]
     },
     {
-      "id": 60,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 20,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 3,
       "group_id": 1,
@@ -532,9 +532,9 @@
       ]
     },
     {
-      "id": 66,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 26,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 3,
       "group_id": 2,
@@ -564,9 +564,9 @@
       ]
     },
     {
-      "id": 72,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 32,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 3,
       "group_id": 3,
@@ -596,9 +596,9 @@
       ]
     },
     {
-      "id": 78,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 38,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 3,
       "group_id": 4,
@@ -628,9 +628,9 @@
       ]
     },
     {
-      "id": 84,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 44,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 3,
       "group_id": 5,
@@ -660,9 +660,9 @@
       ]
     },
     {
-      "id": 61,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 21,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 4,
       "group_id": 1,
@@ -692,9 +692,9 @@
       ]
     },
     {
-      "id": 67,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 27,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 4,
       "group_id": 2,
@@ -724,9 +724,9 @@
       ]
     },
     {
-      "id": 73,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 33,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 4,
       "group_id": 3,
@@ -756,9 +756,9 @@
       ]
     },
     {
-      "id": 79,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 39,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 4,
       "group_id": 4,
@@ -788,9 +788,9 @@
       ]
     },
     {
-      "id": 85,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 45,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 4,
       "group_id": 5,
@@ -820,9 +820,9 @@
       ]
     },
     {
-      "id": 62,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 22,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 5,
       "group_id": 1,
@@ -852,9 +852,9 @@
       ]
     },
     {
-      "id": 68,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 28,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 5,
       "group_id": 2,
@@ -884,9 +884,9 @@
       ]
     },
     {
-      "id": 74,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 34,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 5,
       "group_id": 3,
@@ -916,9 +916,9 @@
       ]
     },
     {
-      "id": 80,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 40,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 5,
       "group_id": 4,
@@ -948,9 +948,9 @@
       ]
     },
     {
-      "id": 86,
-      "bracket_id": 4,
-      "stage_id": 3,
+      "id": 46,
+      "bracket_id": 3,
+      "stage_id": 2,
       "round": 1,
       "slot": 5,
       "group_id": 5,
