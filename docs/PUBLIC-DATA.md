@@ -1,6 +1,6 @@
 # ql-public-data — public documentation
 
-This file is safe to commit in the **public** repository. Internal ops, tokens, and architecture rules live in the private monolith workspace (`docs/MONOREPO-*.md`, `ql-hub/docs/`), not here.
+This file is safe to commit in the **public** repository. Internal ops, tokens, and architecture rules live in the private workspace, not here.
 
 ## Purpose
 
@@ -27,7 +27,7 @@ CDN-friendly JSON and static assets for tournament overlays and public pages. Se
 ## Consumers
 
 - **ql-stream-tools** `live-overlay/dashboard/` and `stream-overlay/` read tournament JSON from CDN (live fields via WebSocket where implemented).
-- **ql-hub** publishes via `public_publish` (private hub code).
+- The private control plane publishes the JSON (operator tooling, not in this repo).
 
 ## Schema changes
 
@@ -35,4 +35,4 @@ Update files under `schema/` when JSON shape changes. Keep backward compatibilit
 
 ## Editing
 
-Local edit + push, or ql-hub «Publish public data» from operator environment.
+Local edit + push, or the operator's publish tooling.
